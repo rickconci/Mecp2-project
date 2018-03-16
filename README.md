@@ -1,0 +1,2 @@
+# Mecp2-project
+Part II project investigating the development of neural networks in dissociated cortical cells from Mecp2-deficient and wild-type mice. Recording spontaneous neuronal activity with multi-electrode arrays to compare functional connectivity and network topologies utilising Graph Theory. Coding in Matlab and R.  Supervised by Dr. Susanna Mierau &amp; Professor Ole Paulsen and collaborated with Manuel Schroeter from Bullmore Lab.
