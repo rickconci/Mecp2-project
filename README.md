@@ -62,10 +62,9 @@ The degree, ki , of node i is the number of unique edges connecting node I with 
 ### Single cell resolution
 Shifting from a 60 MEA to a 4096 electrode MEA would give us single cell resolution in our recordings and a much better signal to noise ratio.  With improved resolution we would be able to create biologically relevant weighted and directed functional networks.
 
-![Imgur](https://i.imgur.com/2qVY6y9.png)
+![Imgur](https://i.imgur.com/2qVY6y9.png =250x250)
 
 
 ### Cell-type resolution
 We could use optogenetics to selectively activate or inhibit the PV-ArchT inhibitory interneurons in our network. This approach allows us to alter the excitatory-inhibitory balance of the network.
 
-![Imgur](https://i.imgur.com/LpYwliT.png)
