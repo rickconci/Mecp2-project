@@ -31,7 +31,7 @@ By overlaying detected spikes on a picture of the neurons, we can eliminate nois
 
 The spiking activity can be visualised with a Raster Plot, with electrode number on the Y axis and time on the X axis. Each dark line denotes a certain number of spikes per time bin.  From this plot it is possible to visually identify possible network bursts (red rectangle).  Identifying which electrodes pick up bursting activity gives a first hint at the functional connections between the neurons on the MEA. 
 
-### For Burst detection I used the ["Parameters for Burst Detection" by Bakkum et al. 2013](doi:10.3389/fncom.2013.00193) 
+### For Burst detection I used the ["Parameters for Burst Detection" by Bakkum et al. 2013](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3915237/pdf/fncom-07-00193.pdf) 
 - Turn the binary spike activity into a vector of spikes times
 - Create a histogram of the inter-spike-intervals for a specific number of spikes N
 - Depending on the distribution of the ISI on the histogram select a threshold 
