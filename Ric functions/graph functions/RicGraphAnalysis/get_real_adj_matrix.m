@@ -1,8 +1,7 @@
-function real_adj_matrix = get_real_adj_matrix(burst_matrix)
+function real_adj_matrix = get_real_adj_matrix(ass_matrix)
 
-%create association matrix from burst data
-ass_matrix = corrcoef(burst_matrix);
 %remove 1s and turn into to the mean of the data
+ass_matrix(isnan(ass_matrix) == 1) = 0;
 mean_of_burst = mean(ass_matrix(:));
 ass_matrix(ass_matrix == 1) = mean_of_burst;
 %plot as heatmap 
@@ -35,12 +34,12 @@ normal_dist = a.*randn(length(assvec),1) + b;
 %histogram(normal_dist);
 
 
-%add a line to deptict the 99th percentile of the normal distribution 
+%add a line to deptict the 95th percentile of the normal distribution 
 %hold on;
-%line([prctile(normal_dist, 99),prctile(normal_dist, 99)], ylim, 'LineWidth', 1, 'Color', 'k');
+%line([prctile(normal_dist, 95),prctile(normal_dist, 95)], ylim, 'LineWidth', 1, 'Color', 'k');
 %hold off
 for ii = 1:length(assvec)
-    if assvec(ii)< prctile(normal_dist, 99)
+    if assvec(ii)< prctile(normal_dist, 95)
         assvec(ii) = 0;
     else
         assvec(ii) = 1;
@@ -60,9 +59,5 @@ real_adj_matrix = reshape(assvec, [row,col]);
 %turn NaN into 0s for future analysis
 real_adj_matrix(isnan(real_adj_matrix) == 1) = 0;
 
-%sort correlation values from largest to smallest 
-%if mode == "sorted"
-%    sorted_assvec = sort(assvec);
-%end 
 
 end 

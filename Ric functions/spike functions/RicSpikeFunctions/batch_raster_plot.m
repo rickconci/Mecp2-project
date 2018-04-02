@@ -12,7 +12,7 @@ samplesize = size(spikes,1)/1000;
 %downsample so takes shorter and can actually see spikes in raster plot
 spikes_down = sparseDownSample(spikes, samplesize, 'sum');
 %create raster plot
-rastPlot(spikes_down);
+rastPlot(full(spikes_down));
 
 %save raster plot as PNG
 printformat = "rasterPlot %s.png";
